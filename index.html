@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>discord.gg/uaee</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Metal Mania', cursive;
+      color: #00ff00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 750px;
+      height: auto;
+      border: 3px solid #00ff00;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.9);
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+      letter-spacing: 2px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 15px;
+      border: 1px solid lime;
+    }
+
+    .text {
+      margin-top: 30px;
+      font-size: 3em;
+      color: #00ff00;
+      text-shadow: 0 0 10px lime, 0 0 20px limegreen, 0 0 40px green;
+      letter-spacing: 8px;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    /* زخرفة سايبر */
+    .cyber-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 0, 0.05),
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      z-index: 1;
+    }
+
+    .glitch {
+      position: absolute;
+      color: #00ff00;
+      font-size: 2em;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+      animation: glitch 1s infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
+
+    .terminal-line {
+      font-size: 1em;
+      color: #00ff00;
+      text-shadow: 0 0 5px #00ff00;
+      font-family: monospace;
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      z-index: 3;
+      animation: terminalScroll 15s linear infinite;
+    }
+
+    @keyframes terminalScroll {
+      0% { transform: translateY(100%); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-200%); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cyber-glow"></div>
+  <div class="glitch">[ HACK ACTIVE Exploiting Done Hhhhh... ]</div>
+  <div class="image-container">
+    <img src="https://l.top4top.io/p_32131zd9t1.png" alt="Discord Image" />
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/sizdgj.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+<div class="text">By Patrick | discord.gg/uaee</div>
+  <div class="info" id="ip-info">
+    <strong>IP: <span id="ip"></span></strong><br />
+    <span><strong>City:</strong> <span id="city"></span></span><br />
+    <span><strong>Region:</strong> <span id="region"></span></span><br />
+    <span><strong>Country:</strong> <span id="country"></span></span><br />
+    <span><strong>Location:</strong> <span id="loc"></span></span><br />
+    <span><strong>Organization:</strong> <span id="org"></span></span><br />
+    <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+  </div>
+
+ 
+
+  <div class="terminal-line">[+] Exploiting port 30120... success!</div>
+
+  <script>
+    fetch('https://ipinfo.io/json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("ip").textContent = data.ip;
+        document.getElementById("city").textContent = data.city;
+        document.getElementById("region").textContent = data.region;
+        document.getElementById("country").textContent = data.country;
+        document.getElementById("loc").textContent = data.loc;
+        document.getElementById("org").textContent = data.org;
+        document.getElementById("timezone").textContent = data.timezone;
+      });
+  </script>
+</body>
+</html>
